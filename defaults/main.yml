@@ -1,0 +1,7 @@
+---
+certbot_renew_hour_gmt: 0
+db_backup_hour_gmt: 20
+directory_sync_hour_gmt: 20
+maintenance_hour_gmt: 21
+maintenance_reboot_hour_gmt: 21
+maintenance_reboot_day_gmt: 0,2,4,6

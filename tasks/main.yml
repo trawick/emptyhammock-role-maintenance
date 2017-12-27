@@ -1,0 +1,7 @@
+---
+- name: Copy maintenance configuration file to server
+  template: src=emptyhammock-maintenance.yml.j2
+        dest=/etc/emptyhammock-maintenance.yml
+        owner=root
+        group=root
+        mode=0644

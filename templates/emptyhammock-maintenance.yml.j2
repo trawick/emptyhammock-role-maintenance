@@ -1,0 +1,18 @@
+---
+version: 1.0.0
+maintenance_apply_when: "5 {{ maintenance_hour_gmt }} * * *"
+maintenance_reboot_when: "6 {{ maintenance_reboot_hour_gmt }} * * {{ maintenance_reboot_day_gmt }}"
+check_python_package_versions:
+    when: "15 5,17 * * *"
+    list_command: "{{ script_dir }}/pip_freeze.sh"
+db_backup:
+    when: "20 {{ db_backup_hour_gmt }} * * *"
+    database: {{ project_db }}
+media_backup:
+    when: "20 {{ directory_sync_hour_gmt }} * * *"
+    path: {{ media_dir }}
+{% if cert_source == "certbot" %}certbot:
+    when: "25 {{ certbot_renew_hour_gmt }} * * *"
+    command: "{{ script_dir }}/renew_certificate.sh"
+    not_due_output: "Cert not yet due for renewal"
+    renewed_output: "all renewals succeeded"{% endif %}
