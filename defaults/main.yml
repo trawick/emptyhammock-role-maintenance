@@ -1,4 +1,5 @@
 ---
+available_os_fix_threshold: 5
 certbot_renew_hour_gmt: 0
 db_backup_hour_gmt: 20
 directory_sync_hour_gmt: 20

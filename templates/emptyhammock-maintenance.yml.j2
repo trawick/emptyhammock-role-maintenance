@@ -5,6 +5,9 @@ maintenance_reboot_when: "6 {{ maintenance_reboot_hour_gmt }} * * {{ maintenance
 check_python_package_versions:
     when: "15 5,17 * * *"
     list_command: "{{ script_dir }}/pip_freeze.sh"
+check_for_available_os_fixes:
+    when: "0 12 * * sun"
+    threshold: ""{{ available_os_fix_threshold }}""
 db_backup:
     when: "20 {{ db_backup_hour_gmt }} * * *"
     database: {{ project_db }}
