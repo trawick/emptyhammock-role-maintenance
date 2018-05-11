@@ -11,9 +11,10 @@ check_for_available_os_fixes:
 db_backup:
     when: "20 {{ db_backup_hour_gmt }} * * *"
     database: {{ project_db }}
-media_backup:
+directory_backup:
     when: "20 {{ directory_sync_hour_gmt }} * * *"
-    path: {{ media_dir }}
+    paths:
+      - {{ media_dir }}
 {% if cert_source == "certbot" %}certbot:
     when: "25 {{ certbot_renew_hour_gmt }} * * *"
     command: "{{ script_dir }}/renew_certificate.sh"
