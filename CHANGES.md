@@ -2,7 +2,7 @@
 
 ## Version 0.0.5
 
-* In the default maintenance configuration file, The media directory backup
+* In the default maintenance configuration file, the media directory backup
   now uses the `directory_backup` task instead of the legacy `media_backup`
   task, support for which will be removed from the maintenance bot soon.
 
