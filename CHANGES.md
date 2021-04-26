@@ -1,5 +1,10 @@
 # Changes and migration requirements
 
+## Version 0.0.6
+
+* Allow overriding the hours at which Python package versions are checked.
+  Default: `5,17`.  Override with `python_package_check_hour_gmt`.
+
 ## Version 0.0.5
 
 * In the default maintenance configuration file, The media directory backup
