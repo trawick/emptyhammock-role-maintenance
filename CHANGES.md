@@ -1,5 +1,10 @@
 # Changes and migration requirements
 
+## Version 0.0.8
+
+* In the default maintenance configuration file, fix a problem in 0.0.7 which
+  led to a malformed configuration file.
+
 ## Version 0.0.7
 
 * In the default maintenance configuration file, handle the certbot message
