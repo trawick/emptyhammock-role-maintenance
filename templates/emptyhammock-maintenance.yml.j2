@@ -18,5 +18,5 @@ directory_backup:
 {% if cert_source == "certbot" %}certbot:
     when: "25 {{ certbot_renew_hour_gmt }} * * *"
     command: "{{ script_dir }}/renew_certificate.sh"
-    not_due_output: "Cert not yet due for renewal"
+    not_due_output: {% if ansible_distribution == "Ubuntu" and ansible_distribution_major_version < "20" %} "Cert not yet due for renewal" {% else %}"The following certificates are not due for renewal yet" {% endif %}
     renewed_output: "all renewals succeeded"{% endif %}

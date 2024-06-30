@@ -1,5 +1,10 @@
 # Changes and migration requirements
 
+## Version 0.0.7
+
+* In the default maintenance configuration file, handle the certbot message
+  indicating that certificates are not yet due for renewal on Ubuntu >= 20.
+
 ## Version 0.0.6
 
 * Allow overriding the hours at which Python package versions are checked.
