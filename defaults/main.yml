@@ -8,3 +8,5 @@ maintenance_reboot_hour_gmt: 21
 maintenance_reboot_day_gmt: 0,2,4,6
 maintenance_template_file: emptyhammock-maintenance.yml.j2
 python_package_check_hour_gmt: 5,17
+run_pipaudit: false
+ignored_python_packages: []

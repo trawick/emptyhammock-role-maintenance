@@ -6,6 +6,8 @@ maintenance_reboot_when: "6 {{ maintenance_reboot_hour_gmt }} * * {{ maintenance
 check_python_package_versions:
     when: "15 {{ python_package_check_hour_gmt }} * * *"
     list_command: "{{ script_dir }}/pip_freeze.sh"
+    run_pipaudit: "{{ run_pipaudit }}"
+    ignored_packages: "{{ ignored_python_packages }}"
 check_for_available_os_fixes:
     when: "0 12 * * sun"
     threshold: "{{ available_os_fix_threshold }}"

@@ -25,7 +25,7 @@ Currently-supported maintenance tasks include
 
 * Apply system maintenance (OS fixes)
 * Reboot the system, if required by system maintenance
-* Analyze versions of Python packages in a virtualenv
+* Analyze versions of Python packages in a virtualenv. optionally running pip-audit
 * Report when/if a backlog of system maintenance needs to be applied
 * Backup databases
 * Backup directory trees

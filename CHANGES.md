@@ -1,5 +1,12 @@
 # Changes and migration requirements
 
+## Version 0.0.9
+
+* When using the default maintenance configuration file:
+  - set run_pipaudit variable to true to run pip-audit on your Python dependencies
+  - set ignored_python_packages variable to a list of packages to ignore when
+    checking for newer versions or running pip-audit
+
 ## Version 0.0.8
 
 * In the default maintenance configuration file, fix a problem in 0.0.7 which
