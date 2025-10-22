@@ -1,5 +1,10 @@
 # Changes and migration requirements
 
+## Version 0.0.10
+
+* When using the default maintenance configuration file:
+  - fix setting of ignored_python_packages variable
+
 ## Version 0.0.9
 
 * When using the default maintenance configuration file:
